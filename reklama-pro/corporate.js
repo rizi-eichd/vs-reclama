@@ -14,6 +14,11 @@
     'ohrana-truda':[['Знаки безопасности','znaki-tb-perechen.html'],['Плакаты','plakaty-ohrana-perechen.html'],['Планы эвакуации','plany-evakuacii.html'],['Наши работы','nashi-raboty-ohrana.html']],
     'markirovka-trub':[['Самоклеющиеся маркеры','markirovka-trub.html#markery'],['Маркировочные ленты','markirovka-trub.html#lenty'],['Предупреждающие кольца','markirovka-trub.html#kolca'],['Руководство по ГОСТ','markirovka-trub.html#rukovodstvo'],['Нормативные документы','markirovka-trub.html#normativy']]
   };
+  if(menu&&!menu.querySelector('.mobile-nav__contacts')){
+    const box=document.createElement('div');box.className='mobile-nav__contacts';
+    box.innerHTML='<p>Свяжитесь с нами</p><a href="tel:+73517710511">(351) 771-05-11</a><a href="tel:+73517710518">(351) 771-05-18</a><a class="mobile-nav__mail" href="mailto:v-s-reklama@mail.ru">v-s-reklama@mail.ru</a>';
+    menu.append(box);
+  }
   const group=groups[document.body.dataset.page];
   if(group){const nav=document.createElement('nav');nav.className='related-directions';nav.setAttribute('aria-label','Услуги направления');for(const [name,href] of group){const a=document.createElement('a');a.href=href;a.textContent=name;nav.append(a);}document.querySelector('.page-hero .container')?.append(nav);}
   const anchors=[...document.querySelectorAll('.related-directions a')].map(a=>[a,document.getElementById(a.hash.slice(1))]).filter(([a,s])=>a.pathname===location.pathname&&s);
