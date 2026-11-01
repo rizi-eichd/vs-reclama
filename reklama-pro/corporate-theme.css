@@ -234,3 +234,22 @@ body.corporate-site,body.corporate-site *{font-family:Futurademic,Arial,sans-ser
 @media(min-width:601px) and (max-width:900px){
   body.corporate-site .mobile-nav{padding-left:max(28px,calc((100% - 640px)/2));padding-right:max(28px,calc((100% - 640px)/2))}
 }
+
+/* Меню на ПК — тонкие скруглённые кнопки */
+@media(min-width:901px){
+  body.corporate-site .nav{gap:8px;padding:14px 0;align-items:center}
+  body.corporate-site .nav>a,
+  body.corporate-site .nav-dropdown__trigger{display:flex;align-items:center;justify-content:center;height:44px;min-height:0;padding:0 18px;border:1px solid #d5e0f0;border-radius:999px;background:#eef3fa;color:var(--brand-blue);font:700 15px/1.2 var(--font-hero,Arial),Arial,sans-serif;box-shadow:none;transition:background .2s,color .2s,border-color .2s}
+  body.corporate-site .nav>a:hover,
+  body.corporate-site .nav-dropdown:hover>.nav-dropdown__trigger,
+  body.corporate-site .nav-dropdown.is-open>.nav-dropdown__trigger{background:var(--brand-blue);border-color:var(--brand-blue);color:#fff;opacity:1}
+  body.corporate-site .nav>a.is-active,
+  body.corporate-site .nav-dropdown__trigger.is-active{background:var(--brand-blue);border-color:var(--brand-blue);color:#fff}
+  body.corporate-site .nav-dropdown{height:auto;align-items:center}
+  body.corporate-site .nav-dropdown__panel{border-radius:12px}
+}
+@media(min-width:901px) and (max-width:1150px){
+  body.corporate-site .nav>a,
+  body.corporate-site .nav-dropdown__trigger{padding:0 12px;font-size:13.5px}
+}
+body.corporate-site .related-directions a{border-radius:999px;padding:9px 16px}
