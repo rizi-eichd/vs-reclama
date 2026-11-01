@@ -12,10 +12,25 @@
     'naruzhnaya-reklama':[['Вывески','vyveski.html'],['Световые короба','svetovye-koroba.html'],['Стенды','stendy.html'],['Таблички','tablichki.html'],['Указатели','ukazateli.html'],['Дополнительные услуги','dop-uslugi.html'],['Монтаж','montazh.html'],['Наши работы','nashi-raboty-naruzhnaya.html']],
     'logotipy-odezhda':[['Термопечать','termopechat.html'],['DTF-печать','dtf-pechat.html'],['Вышивка','vyshivka.html'],['Каски и кепки','kaski-kepki.html'],['Наши работы','nashi-raboty-logotipy.html']],
     'ohrana-truda':[['Знаки безопасности','znaki-tb-perechen.html'],['Плакаты','plakaty-ohrana-perechen.html'],['Планы эвакуации','plany-evakuacii.html'],['Наши работы','nashi-raboty-ohrana.html']],
-    'markirovka-trub':[['Ленты-маркеры','lenty-markery.html'],['Отсылка к ГОСТу','otssylka-k-gostu.html']]
+    'markirovka-trub':[['Самоклеющиеся маркеры','markirovka-trub.html#markery'],['Маркировочные ленты','markirovka-trub.html#lenty'],['Предупреждающие кольца','markirovka-trub.html#kolca'],['Руководство по ГОСТ','markirovka-trub.html#rukovodstvo']]
   };
   const group=groups[document.body.dataset.page];
   if(group){const nav=document.createElement('nav');nav.className='related-directions';nav.setAttribute('aria-label','Услуги направления');for(const [name,href] of group){const a=document.createElement('a');a.href=href;a.textContent=name;nav.append(a);}document.querySelector('.page-hero .container')?.append(nav);}
+  const anchors=[...document.querySelectorAll('.related-directions a')].map(a=>[a,document.getElementById(a.hash.slice(1))]).filter(([a,s])=>a.pathname===location.pathname&&s);
+  if(anchors.length){
+    const bar=document.createElement('div');bar.className='section-subnav';
+    const inner=document.createElement('div');inner.className='container';
+    const nav=anchors[0][0].parentElement;inner.append(nav);bar.append(inner);
+    document.querySelector('.page-hero')?.after(bar);
+    const target=location.hash&&document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if(target)addEventListener('load',()=>setTimeout(()=>target.scrollIntoView(),60),{once:true});
+  }
+  if(anchors.length&&'IntersectionObserver' in window){
+    const mark=id=>anchors.forEach(([a,s])=>{const on=s.id===id;a.classList.toggle('is-active',on);on?a.setAttribute('aria-current','location'):a.removeAttribute('aria-current');});
+    const seen=new Map();
+    const spy=new IntersectionObserver(entries=>{entries.forEach(e=>seen.set(e.target.id,e.isIntersecting));const cur=anchors.find(([,s])=>seen.get(s.id));mark(cur?cur[1].id:'');},{rootMargin:'-35% 0px -55% 0px'});
+    anchors.forEach(([,s])=>spy.observe(s));
+  }
 
   const formGrid=document.querySelector('.application-form__grid');
   const phoneField=formGrid?.querySelector('.phone-field');

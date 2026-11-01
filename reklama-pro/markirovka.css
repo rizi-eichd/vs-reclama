@@ -61,3 +61,13 @@
   .corporate-site .pipe-table th,.corporate-site .pipe-table td{padding:9px 10px}
   .corporate-site .pipe-copy li{font-size:16px}
 }
+
+/* Закреплённые плашки разделов */
+.corporate-site .section-subnav{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 6px 16px #2225210d}
+.corporate-site .section-subnav .related-directions{margin:0;padding:12px 0;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+.corporate-site .section-subnav .related-directions::-webkit-scrollbar{display:none}
+.corporate-site .section-subnav .related-directions a{flex:none;white-space:nowrap;background:#fff}
+.corporate-site .section-subnav .related-directions a.is-active{background:var(--brand-blue);border-color:var(--brand-blue);color:#fff}
+.corporate-site .pipe-copy [id]{scroll-margin-top:90px}
+.corporate-site a.gost-link{color:inherit;font-weight:inherit;text-decoration:underline;text-decoration-color:var(--orange);text-underline-offset:3px;text-decoration-thickness:2px}
+.corporate-site a.gost-link:hover{color:var(--orange-dark)}
