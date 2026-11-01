@@ -12,7 +12,7 @@
     'naruzhnaya-reklama':[['Вывески','vyveski.html'],['Световые короба','svetovye-koroba.html'],['Стенды','stendy.html'],['Таблички','tablichki.html'],['Указатели','ukazateli.html'],['Дополнительные услуги','dop-uslugi.html'],['Монтаж','montazh.html'],['Наши работы','nashi-raboty-naruzhnaya.html']],
     'logotipy-odezhda':[['Термопечать','termopechat.html'],['DTF-печать','dtf-pechat.html'],['Вышивка','vyshivka.html'],['Каски и кепки','kaski-kepki.html'],['Наши работы','nashi-raboty-logotipy.html']],
     'ohrana-truda':[['Знаки безопасности','znaki-tb-perechen.html'],['Плакаты','plakaty-ohrana-perechen.html'],['Планы эвакуации','plany-evakuacii.html'],['Наши работы','nashi-raboty-ohrana.html']],
-    'markirovka-trub':[['Самоклеющиеся маркеры','markirovka-trub.html#markery'],['Маркировочные ленты','markirovka-trub.html#lenty'],['Предупреждающие кольца','markirovka-trub.html#kolca'],['Руководство по ГОСТ','markirovka-trub.html#rukovodstvo']]
+    'markirovka-trub':[['Самоклеющиеся маркеры','markirovka-trub.html#markery'],['Маркировочные ленты','markirovka-trub.html#lenty'],['Предупреждающие кольца','markirovka-trub.html#kolca'],['Руководство по ГОСТ','markirovka-trub.html#rukovodstvo'],['Нормативные документы','markirovka-trub.html#normativy']]
   };
   const group=groups[document.body.dataset.page];
   if(group){const nav=document.createElement('nav');nav.className='related-directions';nav.setAttribute('aria-label','Услуги направления');for(const [name,href] of group){const a=document.createElement('a');a.href=href;a.textContent=name;nav.append(a);}document.querySelector('.page-hero .container')?.append(nav);}

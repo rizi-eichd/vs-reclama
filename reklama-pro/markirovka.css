@@ -71,3 +71,14 @@
 .corporate-site .pipe-copy [id]{scroll-margin-top:90px}
 .corporate-site a.gost-link{color:inherit;font-weight:inherit;text-decoration:underline;text-decoration-color:var(--orange);text-underline-offset:3px;text-decoration-thickness:2px}
 .corporate-site a.gost-link:hover{color:var(--orange-dark)}
+
+/* Нормативные документы */
+.corporate-site .pipe-docs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.corporate-site .pipe-doc{display:flex;flex-direction:column;gap:10px;padding:22px;background:#fff;border:1px solid var(--line);border-top:4px solid var(--brand-blue);border-radius:6px}
+.corporate-site .pipe-copy .pipe-doc h3{margin:0;font:600 16.8px/1.5 Arial,sans-serif;color:var(--ink)}
+.corporate-site .pipe-doc .pipe-doc__code{margin:0;font:700 22px/1.3 Arial,sans-serif;color:var(--brand-blue)}
+.corporate-site .pipe-doc .pipe-doc__meta{margin:0;font-size:14.4px;line-height:1.6;color:var(--muted)}
+.corporate-site .pipe-doc__actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-top:auto;padding-top:8px}
+.corporate-site .pipe-doc__download{font-weight:700;color:var(--brand-blue);text-decoration:underline;text-underline-offset:3px}
+.corporate-site .pipe-doc__download:hover{color:var(--orange-dark)}
+@media(max-width:700px){.corporate-site .pipe-docs{grid-template-columns:minmax(0,1fr)}}
