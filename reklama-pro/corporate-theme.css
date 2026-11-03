@@ -267,3 +267,13 @@ body.corporate-site .related-directions a{border-radius:999px;padding:9px 16px}
 body.corporate-site .site-footer__grid{row-gap:18px;align-items:start}
 body.corporate-site .site-footer .site-footer__brand{grid-column:1/-1;margin:0 0 6px}
 body.corporate-site .site-footer__grid>div>p:first-child{margin-top:0}
+
+/* Шапка: крупнее адрес и телефоны */
+body.corporate-site .header-address{font-size:18px;line-height:1.5}
+body.corporate-site .header-phone{font-size:26px;line-height:1.35}
+body.corporate-site .header-phone--2{font-size:18px}
+@media(max-width:1150px){
+  body.corporate-site .header-address{font-size:16px}
+  body.corporate-site .header-phone{font-size:23px}
+  body.corporate-site .header-phone--2{font-size:16px}
+}
