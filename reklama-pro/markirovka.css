@@ -82,3 +82,29 @@
 .corporate-site .pipe-doc__download{font-weight:700;color:var(--brand-blue);text-decoration:underline;text-underline-offset:3px}
 .corporate-site .pipe-doc__download:hover{color:var(--orange-dark)}
 @media(max-width:700px){.corporate-site .pipe-docs{grid-template-columns:minmax(0,1fr)}}
+
+/* Крупнее шрифт на странице */
+body.corporate-site .pipe-copy p{font-size:20px;line-height:1.75}
+body.corporate-site .pipe-copy .pipe-lead{font-size:22px!important}
+body.corporate-site .pipe-copy li{font-size:20px;line-height:1.65}
+body.corporate-site .pipe-copy h3{font-size:25px}
+body.corporate-site .pipe-table{font-size:18px}
+body.corporate-site .pipe-table td,body.corporate-site .pipe-table th{font-size:18px}
+body.corporate-site .pipe-table caption{font-size:19px}
+body.corporate-site .pipe-copy figcaption{font-size:17.5px!important;line-height:1.5}
+body.corporate-site .pipe-copy .thermo-specs__item strong{font-size:20px}
+body.corporate-site .pipe-copy .thermo-specs__item span{font-size:19px;line-height:1.6}
+body.corporate-site .pipe-copy .pipe-swatches li{font-size:17px}
+body.corporate-site .pipe-copy .pipe-doc h3{font-size:19px}
+body.corporate-site .pipe-copy .pipe-doc .pipe-doc__meta{font-size:16px}
+body.corporate-site .pipe-copy .pipe-doc .pipe-doc__code{font-size:25px}
+body.corporate-site .section-subnav .related-directions a{font-size:16px}
+@media(max-width:600px){
+  body.corporate-site .pipe-copy p,body.corporate-site .pipe-copy li{font-size:18px}
+  body.corporate-site .pipe-copy .pipe-lead{font-size:19px!important}
+  body.corporate-site .pipe-copy h3{font-size:22px}
+  body.corporate-site .pipe-table,body.corporate-site .pipe-table td,body.corporate-site .pipe-table th{font-size:16px}
+  body.corporate-site .pipe-copy figcaption{font-size:16px!important}
+  body.corporate-site .pipe-copy .thermo-specs__item span{font-size:17.5px}
+  body.corporate-site .section-subnav .related-directions a{font-size:15px}
+}
