@@ -278,3 +278,13 @@ body.corporate-site .header-phone--2{font-size:18px}
   body.corporate-site .header-phone--2{font-size:16px}
 }
 .corporate-site .sidebar-phone-note{font-size:.82em;font-weight:500;opacity:.75;white-space:nowrap}
+
+/* Подвал: крупнее шрифт */
+body.corporate-site .site-footer p{font-size:21px;line-height:1.75}
+body.corporate-site .site-footer .site-footer__brand{font-size:40px}
+body.corporate-site .site-footer .site-footer__partner{font-size:19px}
+@media(max-width:600px){
+  body.corporate-site .site-footer p{font-size:19px}
+  body.corporate-site .site-footer .site-footer__brand{font-size:32px}
+  body.corporate-site .site-footer .site-footer__partner{font-size:17px}
+}
